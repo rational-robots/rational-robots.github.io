@@ -134,41 +134,64 @@
         </center>
       </p>
       <p>
-        This workshop explores autonomous robot learners that can rapidly learn in challenging unstructured environments by optimally using all available resources to achieve their mission. In such settings, learning must be fast to minimize downtime, cost-efficient to ensure viability, and human-aware so that robots can safely learn from and act alongside humans. Achieving this requires <b class="font-weight-bold"><i>resource rationality</i></b>: careful deliberation about what to learn, and how to allocate resources like time, computation, and human assistance based on their cost-benefit tradeoff. However, most state-of-the-art robot learning approaches either disregard resource rationality and thus require expensive data collection, or delegate such decisions to humans.
+        Recent advances in robot capabilities, fueled by data-hungry learning algorithms and large-scale foundational models, are undeniably exciting. However, as we marvel at these advancements, a critical question arises: is the current trajectory of "scaling data and compute is all you need" sustainable or even desirable for robotics? Myopically committing to this path risks creating systems that are uneconomical and ill-suited for the various constraints imposed by physical embodiments, thereby limiting widespread adoption. Instead, just as evolution nurtured the emergence of efficient brains or how mature engineering disciplines meticulously navigate resource-performance trade-offs, it is imperative that robot learning as a field embeds resource consideration at every stage of the robot learning deployment lifecycle -- from training and inference to continuous improvement and adaptation. This workshop will explore <i>why</i> designing for resource efficiency is beneficial, <i>which</i> resources should be considered for learning, and <i>how</i> they can be leveraged pragmatically to realize economical robot deployment.
       </p>
       <p>
-        Various communities in robotics and AI interested in efficient learning have independently explored aspects of resource rationality, for example, through efficient use of human feedback by the human-robot interaction community, learning from diverse sources of data by the imitation learning community, and integration with model-based reasoning by the learning-to-plan community. This workshop seeks to create a common forum among researchers and practitioners to exchange insights, discuss key questions, and share a collective path forward to robot intelligence through the unifying lens of resource rationality.
+        Towards this end, we seek to advance robot learning towards <i><b class="font-weight-bold">resource rationality:</b></i> careful deliberation on how the robot should judiciously use resources (such as computation, time, and human assistance) based on their cost-performance tradeoff through all phases of learning. Through this lens, the benefits of resource-rational learning can be explored across a diversity of perspectives, such as the importance of models for principled, sample-efficient learning and inference; effectiveness of simulated data to complement costly real-world samples; leveraging human instructions, feedback, and priors to ground what is important to learn; understanding how much sensing and information is needed for a task; and the implications of resource rationality for today's foundation models.
       </p>
       <p>
-        Resource rationality has broad impact for not only many different problems within robot learning, but more widely, to adjacent fields related to embodied intelligence, such as planning, cognitive science (understanding how human learning can be achieved given biological computational limitations) and causality (understanding how to learn with respect to the processes that generate the data, rather than the data alone). Therefore, our intended audience includes the robot learning, planning, machine learning, cognitive science, and causality communities.
+        Resource rationality has broad impact for not only many different problems within robot learning, but more widely, to adjacent fields related to embodied intelligence, such as planning, cognitive science (understanding how human learning can be achieved given biological computational limitations), causality (understanding the causal relevance of data to decide how training resources should be expended), and systems design and engineering (how to build systems at the Pareto frontier of performance and resource utilization). Therefore, our intended audience includes the robot learning, planning, machine learning, cognitive science, causality, and robotic systems design communities, and we will select speakers and panelists who have expertise within these areas.
       </p>
     </div>
 
     <div class="section" id="discussion">
       <h2>Discussion and Structure</h2>
       <p>
-        Our workshop aims to foster and highlight the many different perspectives that make up work in resource-rational robot learning. To that end, we organize our workshop around three sessions, corresponding to different resources that a robot must leverage: <b class="font-weight-bold"><font color="#CD5C5C">models</font></b>, <b class="font-weight-bold"><font color="#6495ED">training data</font></b>, and <b class="font-weight-bold"><font color="#BA55D3">human help</font></b>. Each session has a series of open-ended questions for speakers, the audience, and the final panel to engage with:
+        Our workshop aims to highlight the diversity of perspectives that compose resource-rational robot learning across the robot learning deployment lifecycle -- <b class="font-weight-bold"><font color="#CD5C5C">training</font></b>, <b class="font-weight-bold"><font color="#6495ED">inference</font></b>, and <b class="font-weight-bold"><font color="#BA55D3">continuous improvement and adaptation</font></b> -- through discussion-rich research questions.
+        These research questions will be embedded throughout the workshop structure, from keynote and contributed talks to our closing debate and reflections on resource rationality.
       </p>
+
+
+
       <ul>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Models: What desiderata should a world model for a rational robot satisfy?</font></b> The world model must not only be learned efficiently but must also be efficient to plan with. We will discuss how data to learn such models should be acquired and also the tradeoffs of different representations.
+          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> What is the role of simulation and sim-to-real transfer to help reduce the need for expensive real-world interaction?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Models: What methods can robots leverage to improve model-based decision-making?</font></b> Methods that are interpretable and offer explanations, such as those from causality, can empower robots to answer "How?" and "Why?" questions.
+          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b>  How can a robot efficiently learn from diverse forms of human input, such as instructions, demonstrations, feedback, and interventions?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#6495ED">Data: What is the optimal combination of simulated and physical data?</font></b> Simulated data is significantly cheaper to collect than physical experience. How can we best make use of simulated data to minimize the total cost of data collection?
+          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> Should data gathering remain a passive process directed solely by humans, or can robots actively shape their learning trajectory?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#6495ED">Data: Should data collection be curated solely by humans or should robots participate actively?</font></b> Most existing large-scale data collection efforts rely on humans to provide demonstrations. Such efforts can benefit from active robot data collection, in which robots autonomously identify and collect relevant experiences for learning.
+          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> How can we further improve the efficiency and utility of model-based learning?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#BA55D3">Humans: How should robots best learn from human instruction?</font></b> In contrast with prevalent imitation learning approaches where robots learn passively from human demonstrations, interactive learning procedures that draw on a theory of minds may allow for more efficient learning from instruction and demonstration.
+          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> How to effectively characterize and accommodate physical constraints on the deployed policy during training in our current robot learning pipelines?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#BA55D3">Humans: How to leverage diverse types of human feedback and interventions?</font></b> Use of different interaction types, such as corrections and preference queries, can help robots learn more nuanced and personalized policies.
+          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> Just as engineers meticulously plan construction sites or space missions, can we establish which robot (hardware + software stack) achieves various task objectives with minimal resources without requiring expensive trial-and-error iterations?
+        </li>
+        <li>
+          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> Can we go beyond the sequential-decision making framing and fully leverage modern asynchronous and parallel computation capabilities for efficient inference?
+        </li>
+        <li>
+          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> What algorithmic advances should we make to adapt a robot's behavior in a sample-efficient manner? Can the process of fine-tuning/adaptation be made significantly cheaper than continued training on large swaths of data?
+        </li>
+        <li>
+          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> How to minimize the cognitive load on humans to help a robot improve?
+        </li>
+        <li>
+          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> When and what aspects of its internal state should a robot communicate to humans in order to maximize learning new concepts and tasks efficiently?
         </li>
       </ul>
+    </div>
+
+    <div class="section" id="topics_of_interest">
+      <h2>Workshop Program</h2>
+      <p>
+        Our workshop will feature a diversity of programming elements to explore resource rationality in robot learning. Specifically, our workshop features keynote talks, contributed talks, a poster session, all-day audience engagement featuring an in-workshop guided survey, a debate to critically analyze whether resource rationality should be a priority for the robot learning community, and culminating reflections on resource rationality.
+      </p>
     </div>
 
     <div class="section" id="topics_of_interest">
@@ -177,7 +200,7 @@
       <ul>
         <li> Cognitive Architecture
         <li> Human-Robot Interaction (HRI)
-        <li> Social Learning and Theory of Mind
+        <li> Intuitive Psychology (Social Learning and Theory of Mind)
         <li> Learning and Planning for Tasks
         <li> Learning and Planning for Control
         <li> Reinforcement Learning
@@ -190,66 +213,99 @@
         <li> Causality, Causal Reasoning, and Causal Learning
         <li> Efficient Adaptation of Large Models
         <li> Efficient Inference of Large Models
+        <li> Program-Guided Learning
+        <li> Active Perception
+        <li> Multi-Objective Optimization
+        <li> Robotic Systems Design
+        <li> Co-Design of Hardware and Controllers
+        <li> Human-in-the-Loop Planning and Execution
       </ul>
       </p>
     </div>
 
-    <div class="section" id="committee" style="text-align: center">
+    <div class="section" id="committee" style="text-align: center; width:142%; position: relative; margin-left: -21%;">
       <h2>Organizing Committee</h2>
       <div class="grid">
         <div class="row justify-content-center">
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://shivamvats.com/" target="_blank"><img src="imgs/shivam.png" class="rounded-circle"
-                alt="Shivam Vats" width="140" height="140"></a>
+                alt="Shivam Vats" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"> <a href="https://shivamvats.com/" target="_blank">Shivam Vats</a></h5>
             <h6>Brown University<br>USA</h6>
           </div>
           <br/> <br/>
 
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://tabula-rosa.github.io/" target="_blank"><img src="imgs/tabitha.png" class="rounded-circle"
-                alt="Tabitha Edith Lee" width="140" height="140"></a>
+                alt="Tabitha Edith Lee" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"><a href="https://tabula-rosa.github.io/" target="_blank">Tabitha Edith Lee</a>
             </h5>
             <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
           </div>
           <br /><br />
 
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://chentoast.github.io/" target="_blank"><img src="imgs/tony.png" class="rounded-circle"
-                alt="Tony Chen" width="140" height="140"></a>
+                alt="Tony Chen" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"><a href="https://chentoast.github.io/" target="_blank">Tony Chen</a>
             </h5>
             <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
           </div>
           <br /><br />
-        </div>
 
-        <div class="row justify-content-center">
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://jiayuanm.com/" target="_blank"><img src="imgs/jiayuan.png" class="rounded-circle"
-                alt="Jiayun Mao" width="140" height="140"></a>
+                alt="Jiayun Mao" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"><a href="https://jiayuanm.com/" target="_blank">Jiayuan Mao</a>
             </h5>
             <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
           </div>
           <br /><br />
 
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
+            <a href="https://arjun-krishna.github.io/" target="_blank"><img src="imgs/arjun.png" class="rounded-circle"
+                alt="Arjun Krishna " width="160" height="160"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://arjun-krishna.github.io/" target="_blank">Arjun Krishna</a>
+            </h5>
+            <h6>University of Pennsylvania<br>USA</h6>
+          </div>
+          <br /><br />
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://neo-x.github.io/" target="_blank"><img src="imgs/glen.png" class="rounded-circle"
-                alt="Glen Berseth" width="140" height="140"></a>
+                alt="Glen Berseth" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"><a href="https://neo-x.github.io/" target="_blank">Glen Berseth</a>
             </h5>
             <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
           </div>
           <br /><br />
 
-          <div class="col-3" style="padding-bottom: 30px;">
+          <div class="col-2" style="padding-bottom: 30px;">
             <a href="https://cs.brown.edu/people/gdk/" target="_blank"><img src="imgs/george.png" class="rounded-circle"
-                alt="George Konidaris" width="140" height="140"></a>
+                alt="George Konidaris" width="160" height="160"></a>
             <h5 style="margin-bottom:0em;"><a href="https://cs.brown.edu/people/gdk/" target="_blank">George Konidaris</a>
             </h5>
             <h6>Brown University<br>USA</h6>
+          </div>
+          <br /><br />
+
+          <div class="col-2" style="padding-bottom: 30px;">
+            <a href="https://shaohua0116.github.io/" target="_blank"><img src="imgs/shao-hua.png" class="rounded-circle"
+                alt="Shao-Hua Sun" width="160" height="160"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://shaohua0116.github.io/" target="_blank">Shao-Hua Sun</a>
+            </h5>
+            <h6>National Taiwan University<br>Taiwan</h6>
+          </div>
+          <br /><br />
+
+          <div class="col-2" style="padding-bottom: 30px;">
+            <a href="https://www.seas.upenn.edu/~dineshj/" target="_blank"><img src="imgs/dinesh.png" class="rounded-circle"
+                alt="Dinesh Jayaraman" width="160" height="160"></a>
+            <h5 style="margin-bottom:0em;"><a href="https://www.seas.upenn.edu/~dineshj/" target="_blank">Dinesh Jayaraman</a>
+            </h5>
+            <h6>University of Pennsylvania<br>USA</h6>
           </div>
           <br /><br />
         </div>
