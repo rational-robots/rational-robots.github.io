@@ -49,7 +49,7 @@
       padding: 40px 20px;
       color: black;
       background: white;
-      background-image: linear-gradient(135deg,#00c86e, #e1f7e6, #00c86e);
+      background-image: linear-gradient(135deg, #00c86e, #e1f7e6, #00c86e);
       /* background-image: url("imgs/corl2024_background.png"); */
       background-size: cover;
       background-position: center;
@@ -128,61 +128,121 @@
       <h2>Overview</h2>
       <p>
         <center>
-        <i>"Intelligence: The ability to use optimally limited resources... to achieve a set of goals..."</i>
-        <br>
-        ~Ray Kurzweil, <i>The Age of Spiritual Machines,</i> 1999
+          <i>"Intelligence: The ability to use optimally limited resources... to achieve a set of goals..."</i>
+          <br>
+          ~Ray Kurzweil, <i>The Age of Spiritual Machines,</i> 1999
         </center>
       </p>
       <p>
-        Recent advances in robot capabilities, fueled by data-hungry learning algorithms and large-scale foundational models, are undeniably exciting. However, as we marvel at these advancements, a critical question arises: is the current trajectory of "scaling data and compute is all you need" sustainable or even desirable for robotics? Myopically committing to this path risks creating systems that are uneconomical and ill-suited for the various constraints imposed by physical embodiments, thereby limiting widespread adoption. Instead, just as evolution nurtured the emergence of efficient brains or how mature engineering disciplines meticulously navigate resource-performance trade-offs, it is imperative that robot learning as a field embeds resource consideration at every stage of the robot learning deployment lifecycle -- from training and inference to continuous improvement and adaptation. This workshop will explore <i>why</i> designing for resource efficiency is beneficial, <i>which</i> resources should be considered for learning, and <i>how</i> they can be leveraged pragmatically to realize economical robot deployment.
+        Recent advances in robot capabilities, fueled by data-hungry learning algorithms and large-scale foundational
+        models, are undeniably exciting. However, as we marvel at these advancements, a critical question arises: is the
+        current trajectory of "scaling data and compute is all you need" sustainable or even desirable for robotics?
+        Myopically committing to this path risks creating systems that are uneconomical and ill-suited for the various
+        constraints imposed by physical embodiments, thereby limiting widespread adoption. Instead, just as evolution
+        nurtured the emergence of efficient brains or how mature engineering disciplines meticulously navigate
+        resource-performance trade-offs, it is imperative that robot learning as a field embeds resource consideration
+        at every stage of the robot learning deployment lifecycle -- from training and inference to continuous
+        improvement and adaptation. This workshop will explore <i>why</i> designing for resource efficiency is
+        beneficial, <i>which</i> resources should be considered for learning, and <i>how</i> they can be leveraged
+        pragmatically to realize economical robot deployment.
       </p>
       <p>
-        Towards this end, we seek to advance robot learning towards <i><b class="font-weight-bold">resource rationality:</b></i> careful deliberation on how the robot should judiciously use resources (such as computation, time, and human assistance) based on their cost-performance tradeoff through all phases of learning. Through this lens, the benefits of resource-rational learning can be explored across a diversity of perspectives, such as the importance of models for principled, sample-efficient learning and inference; effectiveness of simulated data to complement costly real-world samples; leveraging human instructions, feedback, and priors to ground what is important to learn; understanding how much sensing and information is needed for a task; and the implications of resource rationality for today's foundation models.
+        Towards this end, we seek to advance robot learning towards <i><b class="font-weight-bold">resource
+            rationality:</b></i> careful deliberation on how the robot should judiciously use resources (such as
+        computation, time, and human assistance) based on their cost-performance tradeoff through all phases of
+        learning. Through this lens, the benefits of resource-rational learning can be explored across a diversity of
+        perspectives, such as the importance of models for principled, sample-efficient learning and inference;
+        effectiveness of simulated data to complement costly real-world samples; leveraging human instructions,
+        feedback, and priors to ground what is important to learn; understanding how much sensing and information is
+        needed for a task; and the implications of resource rationality for today's foundation models.
       </p>
       <p>
-        Resource rationality has broad impact for not only many different problems within robot learning, but more widely, to adjacent fields related to embodied intelligence, such as planning, cognitive science (understanding how human learning can be achieved given biological computational limitations), causality (understanding the causal relevance of data to decide how training resources should be expended), and systems design and engineering (how to build systems at the Pareto frontier of performance and resource utilization). Therefore, our intended audience includes the robot learning, planning, machine learning, cognitive science, causality, and robotic systems design communities, and we will select speakers and panelists who have expertise within these areas.
+        Resource rationality has broad impact for not only many different problems within robot learning, but more
+        widely, to adjacent fields related to embodied intelligence, such as planning, cognitive science (understanding
+        how human learning can be achieved given biological computational limitations), causality (understanding the
+        causal relevance of data to decide how training resources should be expended), and systems design and
+        engineering (how to build systems at the Pareto frontier of performance and resource utilization). Therefore,
+        our intended audience includes the robot learning, planning, machine learning, cognitive science, causality, and
+        robotic systems design communities, and we will select speakers and panelists who have expertise within these
+        areas.
       </p>
     </div>
 
     <div class="section" id="discussion">
       <h2>Discussion and Structure</h2>
       <p>
-        Our workshop aims to highlight the diversity of perspectives that compose resource-rational robot learning across the robot learning deployment lifecycle -- <b class="font-weight-bold"><font color="#CD5C5C">training</font></b>, <b class="font-weight-bold"><font color="#6495ED">inference</font></b>, and <b class="font-weight-bold"><font color="#BA55D3">continuous improvement and adaptation</font></b> -- through discussion-rich research questions.
-        These research questions will be embedded throughout the workshop structure, from keynote and contributed talks to our closing debate and reflections on resource rationality.
+        Our workshop aims to highlight the diversity of perspectives that compose resource-rational robot learning
+        across the robot learning deployment lifecycle -- <b class="font-weight-bold">
+          <font color="#CD5C5C">training</font>
+        </b>, <b class="font-weight-bold">
+          <font color="#6495ED">inference</font>
+        </b>, and <b class="font-weight-bold">
+          <font color="#BA55D3">continuous improvement and adaptation</font>
+        </b> -- through discussion-rich research questions.
+        These research questions will be embedded throughout the workshop structure, from keynote and contributed talks
+        to our closing debate and reflections on resource rationality.
       </p>
-
-
 
       <ul>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> What is the role of simulation and sim-to-real transfer to help reduce the need for expensive real-world interaction?
+          <b class="font-weight-bold">
+            <font color="#CD5C5C">Training:</font>
+          </b> What is the role of simulation and sim-to-real transfer to help reduce the need for expensive real-world
+          interaction?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b>  How can a robot efficiently learn from diverse forms of human input, such as instructions, demonstrations, feedback, and interventions?
+          <b class="font-weight-bold">
+            <font color="#CD5C5C">Training:</font>
+          </b> How can a robot efficiently learn from diverse forms of human input, such as instructions,
+          demonstrations, feedback, and interventions?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> Should data gathering remain a passive process directed solely by humans, or can robots actively shape their learning trajectory?
+          <b class="font-weight-bold">
+            <font color="#CD5C5C">Training:</font>
+          </b> Should data gathering remain a passive process directed solely by humans, or can robots actively shape
+          their learning trajectory?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#CD5C5C">Training:</font></b> How can we further improve the efficiency and utility of model-based learning?
+          <b class="font-weight-bold">
+            <font color="#CD5C5C">Training:</font>
+          </b> How can we further improve the efficiency and utility of model-based learning?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> How to effectively characterize and accommodate physical constraints on the deployed policy during training in our current robot learning pipelines?
+          <b class="font-weight-bold">
+            <font color="#6495ED">Inference:</font>
+          </b> How to effectively characterize and accommodate physical constraints on the deployed policy during
+          training in our current robot learning pipelines?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> Just as engineers meticulously plan construction sites or space missions, can we establish which robot (hardware + software stack) achieves various task objectives with minimal resources without requiring expensive trial-and-error iterations?
+          <b class="font-weight-bold">
+            <font color="#6495ED">Inference:</font>
+          </b> Just as engineers meticulously plan construction sites or space missions, can we establish which robot
+          (hardware + software stack) achieves various task objectives with minimal resources without requiring
+          expensive trial-and-error iterations?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#6495ED">Inference:</font></b> Can we go beyond the sequential-decision making framing and fully leverage modern asynchronous and parallel computation capabilities for efficient inference?
+          <b class="font-weight-bold">
+            <font color="#6495ED">Inference:</font>
+          </b> Can we go beyond the sequential-decision making framing and fully leverage modern asynchronous and
+          parallel computation capabilities for efficient inference?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> What algorithmic advances should we make to adapt a robot's behavior in a sample-efficient manner? Can the process of fine-tuning/adaptation be made significantly cheaper than continued training on large swaths of data?
+          <b class="font-weight-bold">
+            <font color="#BA55D3">Continuous Improvement:</font>
+          </b> What algorithmic advances should we make to adapt a robot's behavior in a sample-efficient manner? Can
+          the process of fine-tuning/adaptation be made significantly cheaper than continued training on large swaths of
+          data?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> How to minimize the cognitive load on humans to help a robot improve?
+          <b class="font-weight-bold">
+            <font color="#BA55D3">Continuous Improvement:</font>
+          </b> How to minimize the cognitive load on humans to help a robot improve?
         </li>
         <li>
-          <b class="font-weight-bold"><font color="#BA55D3">Continuous Improvement:</font></b> When and what aspects of its internal state should a robot communicate to humans in order to maximize learning new concepts and tasks efficiently?
+          <b class="font-weight-bold">
+            <font color="#BA55D3">Continuous Improvement:</font>
+          </b> When and what aspects of its internal state should a robot communicate to humans in order to maximize
+          learning new concepts and tasks efficiently?
         </li>
       </ul>
     </div>
@@ -190,150 +250,198 @@
     <div class="section" id="topics_of_interest">
       <h2>Workshop Program</h2>
       <p>
-        Our workshop will feature a diversity of programming elements to explore resource rationality in robot learning. Specifically, our workshop features keynote talks, contributed talks, a poster session, all-day audience engagement featuring an in-workshop guided survey, a debate to critically analyze whether resource rationality should be a priority for the robot learning community, and culminating reflections on resource rationality.
+        Our workshop will feature a diversity of programming elements to explore resource rationality in robot learning.
+        Specifically, our workshop features keynote talks, contributed talks, a poster session, all-day audience
+        engagement featuring an in-workshop guided survey, a debate to critically analyze whether resource rationality
+        should be a priority for the robot learning community, and culminating reflections on resource rationality.
       </p>
     </div>
 
     <div class="section" id="topics_of_interest">
-      <h2>Topics of Interest</h2>
-      <p>We will solicit papers relating to the following topics:
-      <ul>
-        <li> Cognitive Architecture
-        <li> Human-Robot Interaction (HRI)
-        <li> Intuitive Psychology (Social Learning and Theory of Mind)
-        <li> Learning and Planning for Tasks
-        <li> Learning and Planning for Control
-        <li> Reinforcement Learning
-        <li> Sim2Real, Generative AI
-        <li> Active Learning
-        <li> Intuitive Physics
-        <li> Multi-Agent Collaboration
-        <li> Lifelong Learning
-        <li> Meta-Reasoning and Meta-Cognition
-        <li> Causality, Causal Reasoning, and Causal Learning
-        <li> Efficient Adaptation of Large Models
-        <li> Efficient Inference of Large Models
-        <li> Program-Guided Learning
-        <li> Active Perception
-        <li> Multi-Objective Optimization
-        <li> Robotic Systems Design
-        <li> Co-Design of Hardware and Controllers
-        <li> Human-in-the-Loop Planning and Execution
-      </ul>
+      <h2>Call For Proposals</h2>
+      <p>
+        We invite contributions that tackle resource rationality for robot learning from diverse perspectives, including
+        but not limited to the following topics. We particularly encourage early-stage ideas, preliminary results, or
+        in-progress work that can spark discussion and inspire new directions.
       </p>
-    </div>
+      <ul>
+        <li>Cognitive Architecture</li>
+        <li>Human-Robot Interaction (HRI)</li>
+        <li>Intuitive Psychology (Social Learning and Theory of Mind)</li>
+        <li>Learning and Planning for Tasks</li>
+        <li>Learning and Planning for Control</li>
+        <li>Reinforcement Learning</li>
+        <li>Sim2Real, Generative AI</li>
+        <li>Active Learning</li>
+        <li>Intuitive Physics</li>
+        <li>Multi-Agent Collaboration</li>
+        <li>Lifelong Learning</li>
+        <li>Meta-Reasoning and Meta-Cognition</li>
+        <li>Causality, Causal Reasoning, and Causal Learning</li>
+        <li>Efficient Adaptation of Large Models</li>
+        <li>Efficient Inference of Large Models</li>
+        <li>Program-Guided Learning</li>
+        <li>Active Perception</li>
+        <li>Multi-Objective Optimization</li>
+        <li>Robotic Systems Design</li>
+        <li>Co-Design of Hardware and Controllers</li>
+        <li>Human-in-the-Loop Planning and Execution</li>
+      </ul>
 
-    <div class="section" id="committee" style="text-align: center; width:142%; position: relative; margin-left: -21%;">
-      <h2>Organizing Committee</h2>
-      <div class="grid">
-        <div class="row justify-content-center">
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://shivamvats.com/" target="_blank"><img src="imgs/shivam.png" class="rounded-circle"
-                alt="Shivam Vats" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"> <a href="https://shivamvats.com/" target="_blank">Shivam Vats</a></h5>
-            <h6>Brown University<br>USA</h6>
-          </div>
-          <br/> <br/>
+      <h3>Submission format</h3>
+      <p>
+        Papers should be submitted through
+        <!-- <a href="https://openreview.net/group?id=robot-learning.org/CoRL/2025/Conference">here</a>. -->
+        <a href="">OpenReview</a>.
+        Papers may be up to 8 pages, and should be formatted using the <a
+          href="https://drive.google.com/file/d/1XalwYG542cg2YAHo8STgZKxhAIA8_HSu/view?usp=sharing">CORL 2025 LaTex template</a>.
+        Acknowledgments, References, and Appendix (optional) will not count towards the page limit, and submissions must
+        be anonymized.
+        Authors are encouraged to submit a supplementary file containing further details for reviewers, to be
+        submitted through OpenReview as a single zip file.
+      </p>
+      <h3>Reviewing process</h3>
+      <p>
+        The reviewing process will be double-blind, single-phase (i.e., no rebuttal).
+      </p>
+      <h3>Publication</h3>
+      <p>
+        The paper accepted to the workshop will be non-archival — there will be no formal proceedings.
+        At least one author for each accepted paper must attend the workshop in-person.
+      </p>
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://tabula-rosa.github.io/" target="_blank"><img src="imgs/tabitha.png" class="rounded-circle"
-                alt="Tabitha Edith Lee" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://tabula-rosa.github.io/" target="_blank">Tabitha Edith Lee</a>
-            </h5>
-            <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
-          </div>
-          <br /><br />
+      <div id="important-dates" style="padding-top: 20px;">
+        <h2>Important Dates</h2>
+        <p>
+          <b>Submission Deadline:</b> Aug 8, 2025, AoE<br>
+          <b>Author Notification:</b> Aug 22, 2025, AoE<br>
+          <b>Camera Ready Deadline:</b> Sep 13, 2025, AoE<br>
+          <b>Workshop Date:</b> Sep 27, 2025<br><br>
+        </p>
+      </div>
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://chentoast.github.io/" target="_blank"><img src="imgs/tony.png" class="rounded-circle"
-                alt="Tony Chen" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://chentoast.github.io/" target="_blank">Tony Chen</a>
-            </h5>
-            <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
-          </div>
-          <br /><br />
+      <div class="section" id="committee"
+        style="text-align: center; width:142%; position: relative; margin-left: -21%;">
+        <h2>Organizing Committee</h2>
+        <div class="grid">
+          <div class="row justify-content-center">
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://shivamvats.com/" target="_blank"><img src="imgs/shivam.png" class="rounded-circle"
+                  alt="Shivam Vats" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"> <a href="https://shivamvats.com/" target="_blank">Shivam Vats</a></h5>
+              <h6>Brown University<br>USA</h6>
+            </div>
+            <br /> <br />
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://jiayuanm.com/" target="_blank"><img src="imgs/jiayuan.png" class="rounded-circle"
-                alt="Jiayun Mao" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://jiayuanm.com/" target="_blank">Jiayuan Mao</a>
-            </h5>
-            <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
-          </div>
-          <br /><br />
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://tabula-rosa.github.io/" target="_blank"><img src="imgs/tabitha.png"
+                  class="rounded-circle" alt="Tabitha Edith Lee" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://tabula-rosa.github.io/" target="_blank">Tabitha Edith
+                  Lee</a>
+              </h5>
+              <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
+            </div>
+            <br /><br />
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://arjun-krishna.github.io/" target="_blank"><img src="imgs/arjun.png" class="rounded-circle"
-                alt="Arjun Krishna " width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://arjun-krishna.github.io/" target="_blank">Arjun Krishna</a>
-            </h5>
-            <h6>University of Pennsylvania<br>USA</h6>
-          </div>
-          <br /><br />
-        </div>
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://chentoast.github.io/" target="_blank"><img src="imgs/tony.png" class="rounded-circle"
+                  alt="Tony Chen" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://chentoast.github.io/" target="_blank">Tony Chen</a>
+              </h5>
+              <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
+            </div>
+            <br /><br />
 
-        <div class="row justify-content-center">
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://neo-x.github.io/" target="_blank"><img src="imgs/glen.png" class="rounded-circle"
-                alt="Glen Berseth" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://neo-x.github.io/" target="_blank">Glen Berseth</a>
-            </h5>
-            <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
-          </div>
-          <br /><br />
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://jiayuanm.com/" target="_blank"><img src="imgs/jiayuan.png" class="rounded-circle"
+                  alt="Jiayun Mao" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://jiayuanm.com/" target="_blank">Jiayuan Mao</a>
+              </h5>
+              <h6>Massachusetts Institute<br>of Technology<br>USA</h6>
+            </div>
+            <br /><br />
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://cs.brown.edu/people/gdk/" target="_blank"><img src="imgs/george.png" class="rounded-circle"
-                alt="George Konidaris" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://cs.brown.edu/people/gdk/" target="_blank">George Konidaris</a>
-            </h5>
-            <h6>Brown University<br>USA</h6>
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://arjun-krishna.github.io/" target="_blank"><img src="imgs/arjun.png"
+                  class="rounded-circle" alt="Arjun Krishna " width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://arjun-krishna.github.io/" target="_blank">Arjun
+                  Krishna</a>
+              </h5>
+              <h6>University of Pennsylvania<br>USA</h6>
+            </div>
+            <br /><br />
           </div>
-          <br /><br />
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://shaohua0116.github.io/" target="_blank"><img src="imgs/shao-hua.png" class="rounded-circle"
-                alt="Shao-Hua Sun" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://shaohua0116.github.io/" target="_blank">Shao-Hua Sun</a>
-            </h5>
-            <h6>National Taiwan University<br>Taiwan</h6>
-          </div>
-          <br /><br />
+          <div class="row justify-content-center">
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://neo-x.github.io/" target="_blank"><img src="imgs/glen.png" class="rounded-circle"
+                  alt="Glen Berseth" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://neo-x.github.io/" target="_blank">Glen Berseth</a>
+              </h5>
+              <h6>Université de Montréal &<br>Mila - Quebec AI Institute<br>Canada</h6>
+            </div>
+            <br /><br />
 
-          <div class="col-2" style="padding-bottom: 30px;">
-            <a href="https://www.seas.upenn.edu/~dineshj/" target="_blank"><img src="imgs/dinesh.png" class="rounded-circle"
-                alt="Dinesh Jayaraman" width="160" height="160"></a>
-            <h5 style="margin-bottom:0em;"><a href="https://www.seas.upenn.edu/~dineshj/" target="_blank">Dinesh Jayaraman</a>
-            </h5>
-            <h6>University of Pennsylvania<br>USA</h6>
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://cs.brown.edu/people/gdk/" target="_blank"><img src="imgs/george.png"
+                  class="rounded-circle" alt="George Konidaris" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://cs.brown.edu/people/gdk/" target="_blank">George
+                  Konidaris</a>
+              </h5>
+              <h6>Brown University<br>USA</h6>
+            </div>
+            <br /><br />
+
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://shaohua0116.github.io/" target="_blank"><img src="imgs/shao-hua.png"
+                  class="rounded-circle" alt="Shao-Hua Sun" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://shaohua0116.github.io/" target="_blank">Shao-Hua Sun</a>
+              </h5>
+              <h6>National Taiwan University<br>Taiwan</h6>
+            </div>
+            <br /><br />
+
+            <div class="col-2" style="padding-bottom: 30px;">
+              <a href="https://www.seas.upenn.edu/~dineshj/" target="_blank"><img src="imgs/dinesh.png"
+                  class="rounded-circle" alt="Dinesh Jayaraman" width="160" height="160"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://www.seas.upenn.edu/~dineshj/" target="_blank">Dinesh
+                  Jayaraman</a>
+              </h5>
+              <h6>University of Pennsylvania<br>USA</h6>
+            </div>
+            <br /><br />
           </div>
-          <br /><br />
         </div>
       </div>
-    </div>
 
-    <div class="section" id="template" style="text-align: center">
-      <h2>Template</h2>
-      Our website was built by extending the websites of the <a href="https://leap-workshop.github.io/">Learning Effective Abstractions for Planning (CoRL 2024)</a> and the <a href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/">Generalizable Policy Learning in the Physical World (ICLR 2022)</a> workshops. We thank the organizers of these workshops for making their websites openly available.
-    </div>
+      <div class="section" id="template" style="text-align: center">
+        <h2>Template</h2>
+        Our website was built by extending the websites of the <a href="https://leap-workshop.github.io/">Learning
+          Effective Abstractions for Planning (CoRL 2024)</a> and the <a
+          href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/">Generalizable
+          Policy
+          Learning in the Physical World (ICLR 2022)</a> workshops. We thank the organizers of these workshops for
+        making
+        their websites openly available.
+      </div>
 
-    <script src="javascripts/scale.fix.js"></script>
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+      <script src="javascripts/scale.fix.js"></script>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-    </script>
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+      </script>
 </body>
 
 </html>
